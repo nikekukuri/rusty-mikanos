@@ -21,6 +21,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "kernel"
+version = "0.1.0"
+
+[[package]]
+name = "loader"
+version = "0.1.0"
+dependencies = [
+ "uefi",
+ "uefi-services",
+]
+
+[[package]]
 name = "log"
 version = "0.4.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -48,14 +60,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50f3b39ccfb720540debaa0164757101c08ecb8d326b15358ce76a62c7e85965"
 dependencies = [
  "proc-macro2",
-]
-
-[[package]]
-name = "rusty-mikanOS"
-version = "0.1.0"
-dependencies = [
- "uefi",
- "uefi-services",
 ]
 
 [[package]]
