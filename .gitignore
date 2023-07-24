@@ -1,0 +1,8 @@
+/mikanos
+/edk2
+/osbook
+/mnt
+
+# Added by cargo
+/target
+
