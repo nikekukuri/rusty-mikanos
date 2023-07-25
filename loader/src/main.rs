@@ -12,7 +12,7 @@ use uefi::prelude::*;
 #[entry]
 fn efi_main(_image: Handle, mut st: SystemTable<Boot>) -> Status {
     st.stdout().reset(false).unwrap_success();
-    writeln!(st.stdout(), "Hello, World!").unwrap();
+    writeln!(st.stdout(), "Hello, Mikan World!").unwrap();
 
     loop {}
 }

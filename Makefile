@@ -9,3 +9,6 @@ ors-loader.efi: FORCE
 #	cp target/x86_64-unknown-none-ors/debug/ors-kernel ors-kernel.elf
 
 FORCE:
+
+run_qemu_loader:
+	~/devenv/run_qemu.sh loader.efi
