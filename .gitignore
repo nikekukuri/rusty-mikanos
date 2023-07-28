@@ -8,4 +8,5 @@
 
 /ref
 loader.efi
-loader.efi
+kernel.elf
+disk.img

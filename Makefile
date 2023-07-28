@@ -1,14 +1,14 @@
-all: ors-loader.efi 
+all: loader.efi kernel.elf
 
-ors-loader.efi: FORCE
+loader.efi: FORCE
 	cd loader && cargo build
 	cp target/x86_64-unknown-uefi/debug/loader.efi loader.efi
 
-#ors-kernel.elf: FORCE
-#	cd ors-kernel && cargo build
-#	cp target/x86_64-unknown-none-ors/debug/ors-kernel ors-kernel.elf
+kernel.elf: FORCE
+	cd kernel && cargo build
+	cp target/x86_64-unknown-none-ors/debug/kernel kernel.elf
+
+qemu: loader.efi kernel.elf
+	./qemu/make_and_run.sh loader.efi kernel.elf
 
 FORCE:
-
-run_qemu_loader:
-	~/devenv/run_qemu.sh loader.efi
