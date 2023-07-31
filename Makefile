@@ -12,3 +12,6 @@ qemu: loader.efi kernel.elf
 	./qemu/make_and_run.sh loader.efi kernel.elf
 
 FORCE:
+
+clean:
+	rm -f kernel.elf loader.efi
